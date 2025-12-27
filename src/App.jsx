@@ -21,15 +21,12 @@ export const App = () => {
         <Tabs
           tabs={tabs}
           activeTabId={activeTab.id}
-          onTabSelected={(id) => {
+          onTabSelected={id => {
             const tab = tabs.find(t => t.id === id);
+
             setActiveTab(tab);
           }}
         />
-
-        <div className="block" data-cy="TabContent">
-          {activeTab.content}
-        </div>
       </div>
     </div>
   );
